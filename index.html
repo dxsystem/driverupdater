@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DriverUpdater</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>DriverUpdater (Windows)</h1>
+      <p class="description">
+        Gestiona actualización, respaldo y reinstalación de drivers usando PowerShell y utilidades nativas.
+      </p>
+
+      <section class="card">
+        <h2>1) Buscar actualizaciones</h2>
+        <button id="scan-btn">Escanear actualizaciones de drivers</button>
+      </section>
+
+      <section class="card">
+        <h2>2) Instalar actualizaciones</h2>
+        <button id="install-btn">Instalar actualizaciones</button>
+      </section>
+
+      <section class="card">
+        <h2>3) Respaldar drivers</h2>
+        <label for="backup-path">Ruta de respaldo</label>
+        <input id="backup-path" type="text" placeholder="C:\\DriverBackups\\2026-02-10" />
+        <button id="backup-btn">Crear respaldo</button>
+      </section>
+
+      <section class="card">
+        <h2>4) Validar y reinstalar desde respaldo</h2>
+        <label for="restore-path">Ruta del respaldo</label>
+        <input id="restore-path" type="text" placeholder="C:\\DriverBackups\\2026-02-10" />
+        <div class="row">
+          <button id="validate-btn">Validar respaldo</button>
+          <button id="restore-btn">Reinstalar drivers</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Salida</h2>
+        <pre id="output">Listo. Ejecuta una acción.</pre>
+      </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
